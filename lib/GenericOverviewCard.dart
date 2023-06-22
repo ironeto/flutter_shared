@@ -3,10 +3,12 @@ import 'package:provider/provider.dart';
 
 import 'IGenericOverviewCard.dart';
 
-export 'package:shared_pk/GenericOverviewCard.dart';
+class GenericOverviewCard<T extends IGenericOverviewCard>
+    extends StatelessWidget {
+  final String labelForCounter;
 
-class GenericOverviewCard<T extends IGenericOverviewCard> extends StatelessWidget {
-  const GenericOverviewCard({Key? key});
+  const GenericOverviewCard({Key? key, required this.labelForCounter})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +17,8 @@ class GenericOverviewCard<T extends IGenericOverviewCard> extends StatelessWidge
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text(
-            "Total horas",
+          Text(
+            labelForCounter,
             style: TextStyle(fontSize: 22.0),
           ),
           Column(
