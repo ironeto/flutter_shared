@@ -22,7 +22,7 @@ class GenericOverviewCard<T extends IGenericOverviewCard> extends StatelessWidge
           Column(
             children: [
               Text(
-                "${provider.countItens()}",
+                "${provider.countItems()}",
                 style: TextStyle(fontSize: 22.0),
               ),
             ],
