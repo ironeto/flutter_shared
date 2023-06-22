@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 
 import 'IGenericOverviewCard.dart';
 
+export 'package:shared_pk/GenericOverviewCard.dart';
+
 class GenericOverviewCard<T extends IGenericOverviewCard> extends StatelessWidget {
   const GenericOverviewCard({Key? key});
 
