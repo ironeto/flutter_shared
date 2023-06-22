@@ -1,5 +1,8 @@
 export 'package:shared_pk/IGenericOverviewCard.dart';
 
-abstract class IGenericOverviewCard {
-  int countItens();
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+abstract class IGenericOverviewCard with ChangeNotifier {
+  int countItems();
 }
